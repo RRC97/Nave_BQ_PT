@@ -1,0 +1,38 @@
+body
+{
+    margin: 0px;
+}
+
+#barmain
+{
+    background-color: #f03500;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;}
+
+.buttonMenuBar
+{
+    float: left;
+    padding: 10px;
+    height: 100%;
+    width: 100px;
+}
+
+.buttonMenuBar a
+{
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.buttonMenuBar:hover
+{
+    background-color: #f00f00;
+}
