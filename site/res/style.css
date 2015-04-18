@@ -1,6 +1,7 @@
 body
 {
     margin: 0px;
+	font-family: Calibri;
 }
 
 #barmain
@@ -9,30 +10,55 @@ body
     position: fixed;
     height: auto;
     width: 100%;
-    text-align: center;
 }
-
-ul{
+#barmain ul
+{
+    list-style-type: none;
     padding: 0px;
     margin: 0px;
-    list-style-type: none;}
-
-.buttonMenuBar
+	float: left;
+    width: 100%;
+}
+#barmain .button
 {
-    float: left;
-    padding: 10px;
-    height: 100%;
-    width: 100px;
+	float: left;
+    height: 40px;
+    width: auto;
 }
 
-.buttonMenuBar a
+#context
 {
-    display: block;
+	width: 80%;
+	height: auto;
+	padding: auto;
+	padding-top: 40px;
+}
+
+.button
+{
+	text-align: center;
+	font-family: Arial;
+}
+.button a
+{
+	background-color: #f03500;
+	display: block;
     color: white;
     text-decoration: none;
+	padding: 0px 20px 0px 20px;
+	height: 100%;
+	line-height:40px;
 }
-
-.buttonMenuBar:hover
+.button:hover a
 {
     background-color: #f00f00;
+    color: #0f0f00;
+}
+.button a img
+{
+	vertical-align: middle;
+}
+.edit
+{
+
 }
