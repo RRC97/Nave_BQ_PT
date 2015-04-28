@@ -9,6 +9,7 @@
 		?>
 		<center>
 		<div id="context">
+		
 			<div id="header">
 				<img src="res/logo.png" height="150px"></img>
 			</div>
@@ -16,7 +17,6 @@
 				Conteudo
 			</div>
 			<div id="footer">
-				Rodapé
 			</div>
 		</div>
 		</center>

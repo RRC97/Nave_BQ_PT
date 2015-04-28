@@ -1,12 +1,13 @@
 body
 {
+	background-color: #ffffff;
     margin: 0px;
 	font-family: Calibri;
 }
 
 #barmain
 {
-    background-color: #f03500;
+    background-color: #d53138;
     position: fixed;
     height: auto;
     width: 100%;
@@ -32,6 +33,22 @@ body
 	height: auto;
 	padding: auto;
 	padding-top: 40px;
+	text-align: left;
+}
+
+#context #header
+{
+	text-align: center;
+	min-height: 150px;
+	height: auto;
+	width: auto;
+}
+
+#context #footer
+{
+	position:relative;
+	min-height: 150px;
+	margin-top: 100%;
 }
 
 .button
@@ -41,7 +58,7 @@ body
 }
 .button a
 {
-	background-color: #f03500;
+	background-color: #d53138;
 	display: block;
     color: white;
     text-decoration: none;
@@ -51,8 +68,8 @@ body
 }
 .button:hover a
 {
-    background-color: #f00f00;
-    color: #0f0f00;
+    background-color: #ff7c03;
+	color: white;
 }
 .button a img
 {

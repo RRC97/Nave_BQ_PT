@@ -1,36 +1,36 @@
-<html>
-	<?php
-		include("php/connect.php");
-	?>
-	
-	<head>
+<html>	
+    <head>
 		<meta charset="UTF-8" /> 
         <link type="text/css" rel="stylesheet" href="res/style.css" />
     </head>
-	<body>
+    <body>
 		<?php
 			include("src/bar.php");
 		?>
+		
+		
 		<center>
 		<div id="context">
-			<p>Comando: <input id="command" type="text" class="edit" hint="Commando"></input></p><p>
-			<p>Resposta A: <input id="command" type="text" class="edit" hint="Commando"></input></p><p>
-			<p>Resposta B: <input id="command" type="text" class="edit" hint="Commando"></input></p><p>
-			<p>Resposta C: <input id="command" type="text" class="edit" hint="Commando"></input></p><p>
-			<p>Resposta D: <input id="command" type="text" class="edit" hint="Commando"></input></p><p>
-			<p>Resposta E: <input id="command" type="text" class="edit" hint="Commando"></input></p><p>
-			<p>Gabarito: <input id="command" type="text" class="edit" hint="Commando"></input></p><p>
-			<div class="button" style="width: 180px; height: 40px;"><a href="#" onclick="addQuest()">Adicionar questão</a></div></p>
+			<div id="header">
+				<img src="res/logo.png" height="150px"></img>
+			</div>
+			<div id="cotent">
+				<?php
+				if(ISTEACHER == '1')
+				{
+					echo '<p><div class="button" style="width: 180px; height: 40px;">' .
+						'<a href="addquest.php">Adicionar questão</a></div></p>';
+				}
+				else
+				{
+					echo '<p><div class="button" style="width: 180px; height: 40px;">' .
+						'<a href="oneshotquest.php">Resolver questão</a></div></p>';
+				}
+				?>
+			</div>
+			<div id="footer">
+			</div>
 		</div>
 		</center>
-		
-		<script type="text/javascript">
-			function addQuest()
-			{
-				var command = document.getElementById("command");
-				var message = "Comando";
-				alert(message + ": " + command.value);
-			}
-		</script>
-	</body>
-<html>
+    </body>
+</html>

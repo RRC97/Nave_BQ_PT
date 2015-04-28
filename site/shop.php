@@ -13,10 +13,9 @@
 				<img src="res/logo.png" height="150px"></img>
 			</div>
 			<div id="cotent">
-				Conteudo
+				Conteúdo
 			</div>
 			<div id="footer">
-				Rodapé
 			</div>
 		</div>
 		</center>
