@@ -14,7 +14,7 @@
 				<img src="res/logo.png" height="150px"></img>
 			</div>
 			<div id="cotent">
-				Conteudo
+				Perfil
 			</div>
 			<div id="footer">
 			</div>
