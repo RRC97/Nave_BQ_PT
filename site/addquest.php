@@ -23,9 +23,16 @@
 			<div id="header">
 				<img src="res/logo.png" height="150px"></img>
 			</div>
-			<div id = "content">
 			
-			<p>Comando: <br><input id="command" type="text" class="edit"></input><br>
+			<div id="content">
+			Comando: <br><textarea id="command" type="text" cols="60" rows="3"></textarea><br>
+			Explicação A: <br><textarea id="expA" type="text" cols="60" rows="2"></textarea><br>
+			Explicação B: <br><textarea id="expB" type="text" cols="60" rows="2"></textarea><br>
+			Explicação C: <br><textarea id="expC" type="text" cols="60" rows="2"></textarea><br>
+			Explicação D: <br><textarea id="expD" type="text" cols="60" rows="2"></textarea><br>
+			Explicação E: <br><textarea id="expE" type="text" cols="60" rows="2"></textarea><br>
+			</div>
+			<div id = "extra">
 			Resposta A: <br><input id="a" type="text" class="edit"></input><br>
 			Resposta B:<br><input id="b" type="text" class="edit"></input><br>
 			Resposta C:<br> <input id="c" type="text" class="edit"></input><br>
@@ -38,11 +45,16 @@
 							<option value="3">C</option>
 							<option value="4">D</option>
 							<option value="5">E</option>
+							</select>
+			Matéria: <br><select id="subject" style="width: 173px; height: 20px">
+							<option value="0">Selecione uma matéria</option>
+							<option value="1">Matemática</option>
+							<option value="2">Português</option>
+							<option value="3">Outra</option>
 							</select></p>
 			<p><div class="button" style="width: 180px; height: 40px;">
 				<a href="#" onclick="add()">Adicionar questão</a></div></p>
 			</div>
-			<div id="footer"></div>
 		</div>
 		</center>
 		
@@ -53,15 +65,23 @@
 			var c = document.getElementById("c");
 			var d = document.getElementById("d");
 			var e = document.getElementById("e");
+			var expA = document.getElementById("expA");
+			var expB = document.getElementById("expB");
+			var expC = document.getElementById("expC");
+			var expD = document.getElementById("expD");
+			var expE = document.getElementById("expE");
 			
 			var template = document.getElementById("template");
+			var subject = document.getElementById("subject");
 			
 			function add()
 			{
-				if(template.selectedIndex > 0 && command.value != "" && a.value != ""
-				&& b.value != "" && c.value != "" && d.value != "" && e.value != "" )
+				if(template.selectedIndex > 0 && subject.selectedIndex > 0 && command.value != "" && a.value != ""
+				&& b.value != "" && c.value != "" && d.value != "" && e.value != "" &&
+				expA.value != "" && expB.value != "" && expC.value != "" && expD.value != "" && expE.value != "")
 				{
-					addQuest(command.value, a.value, b.value, c.value, d.value, e.value, template.selectedIndex);
+					addQuest(command.value, a.value, b.value, c.value, d.value, e.value, expA.value, expB.value,
+					expC.value, expD.value, expC.value, subject.selectedIndex, template.selectedIndex);
 				}
 			}
 		</script>

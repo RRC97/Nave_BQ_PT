@@ -14,7 +14,8 @@
 			<div id="header">
 				<img src="res/logo.png" height="150px"></img>
 			</div>
-			<div id="content">
+			<div class="focused">
+				<center>
 				<p>Digite seu nome <br><input id="name" type="text" class="edit"></input><br>
 				Digite seu sobrenome <br><input id="lastname" type="text" class="edit"></input><br>
 				Digite seu e-mail <br><input id="email" type="text" class="edit"></input><br>
@@ -22,6 +23,7 @@
 				Repita a senha <br><input id="repass" type="password" class="edit"></input></p>
 				<p><div class="button" style="width: 120px; height: 40px">
 				<a id="login" href="#" onclick="signin();">Cadastrar</a></div></p>
+				</center>
 			</div>
 		</div>
 		</center>
@@ -35,15 +37,22 @@
 			
 			function signin()
 			{
-			
-				if(editPass.value == editRepass.value)
+				if(editName.value != "" && editPass.value != "" && editEmail.value != ""
+				&& editRepass.value != "" && editLastname.value != "")
 				{
-					var name = editName.value + " " + editLastname.value;
-					sign(name, editEmail.value, editPass.value);
+					if(editPass.value == editRepass.value)
+					{
+						var name = editName.value + " " + editLastname.value;
+						sign(name, editEmail.value, editPass.value);
+					}
+					else
+					{
+						alert("Senhas não estão em concordância");
+					}
 				}
 				else
 				{
-					alert("Senhas não estão em concordância");
+					alert("Preencha todos os campos");
 				}
 			}
 		</script>

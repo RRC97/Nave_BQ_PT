@@ -6,7 +6,7 @@ function log(email, pass)
 	formData.append("password", pass);
 
 	var request = new XMLHttpRequest();
-	request.open("POST", "php/connect.php");
+	request.open("POST", "./php/connect.php");
 	request.send(formData);
 	
 	request.onreadystatechange = function()

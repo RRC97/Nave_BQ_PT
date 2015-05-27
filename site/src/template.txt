@@ -12,10 +12,8 @@
 			<div id="header">
 				<img src="res/logo.png" height="150px"></img>
 			</div>
-			<div id="cotent">
+			<div id="content">
 				Conteúdo
-			</div>
-			<div id="footer">
 			</div>
 		</div>
 		</center>

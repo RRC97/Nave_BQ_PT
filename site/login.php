@@ -11,16 +11,16 @@
 		<center>
 		<div id="context">
 			<div id="header">
-				<img src="res/logo.png" height="150px"></img>
-			</div>
-			<div id="content">
-				<center>
+				<img src="res/logo.png"></img>
+			</div><center>
+			<div class="focused">
+				
 				<p>E-mail <br><input id="email" type="text" class="edit"></input><br>
 				Senha <br><input id="pass" type="password" class="edit"></input></p>
 				<p><div class="button" style="width: 120px; height: 40px">
 					<a id="login" href="#" onclick="login();">Entrar</a></div></p>
-				<center/>
 			</div>
+				<center/>
 		</div>
 		</center>
 		

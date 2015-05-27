@@ -12,12 +12,13 @@
 			var isTeacher = "<?php echo ISTEACHER; ?>";
 			if(isTeacher == "1")
 			{
-				alert("Você não ganhará nada resolvendo questões");
+				alert("Você não ganhará moedas resolvendo questões");
 			}
 		</script>
 		
 		<?php
 			include("php/getquest.php");
+			include("php/manager.php");
 		?>
 		
 		<center>
@@ -25,10 +26,11 @@
 			<div id="header">
 				<img src="res/logo.png" height="150px"></img>
 			</div>
-			<div id = "content">
+			<div class="focused">
 			
-			<div id="command"></div>
+			<div id="command" class="focused"></div>
 			
+			<div class="focused">
 			<input id="1" type="radio" name="response"><span id="a"></span></input><br>
 			<input id="2" type="radio" name="response"><span id="b"></span></input><br>
 			<input id="3" type="radio" name="response"><span id="c"></span></input><br>
@@ -37,7 +39,7 @@
 			<p><div class="button" style="width: 180px; height: 40px;">
 				<a href="#" onclick="responseQuest()">Feito</a></div></p>
 			</div>
-			<div id="footer"></div>
+			</div>
 		</div>
 		
 		<script type="text/javascript" src="js/correctquest.js"></script>
@@ -65,7 +67,9 @@
 					}
 				}
 				if(response != "")
+				{
 					correct(quest[0], response);
+				}
 				else
 					alert("Selecione uma resposta");
 			}

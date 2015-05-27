@@ -1,4 +1,4 @@
-function addQuest(command, a, b, c, d, e, template)
+function addQuest(command, a, b, c, d, e, expA, expB, expC, expD, expE, subject, template)
 {
 	var formData = new FormData();
 
@@ -9,6 +9,12 @@ function addQuest(command, a, b, c, d, e, template)
 	formData.append("c", c);
 	formData.append("d", d);
 	formData.append("e", e);
+	formData.append("expA", expA);
+	formData.append("expB", expB);
+	formData.append("expC", expC);
+	formData.append("expD", expD);
+	formData.append("expE", expE);
+	formData.append("subject", subject);
 
 	var request = new XMLHttpRequest();
 	request.open("POST", "php/newquest.php");
